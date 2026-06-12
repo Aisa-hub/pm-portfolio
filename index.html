@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aissatou Diallo — Product Manager</title>
+
+  <!-- Fonts: Fraunces for headlines, Public Sans for body text -->
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============ YOUR COLORS — change these to retheme everything ============ */
+    :root {
+      --navy: #1B2A4A;
+      --gray: #F5F5F5;
+      --gold: #C9A84C;
+      --text: #1C2433;
+      --muted: #5C6B80;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Public Sans", sans-serif;
+      background: var(--gray);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 { font-family: "Fraunces", Georgia, serif; font-weight: 500; }
+
+    .wrap { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+
+    a { color: var(--navy); text-decoration: none; }
+
+    /* ============ NAVIGATION ============ */
+    nav {
+      background: white;
+      border-bottom: 1px solid #e2e0d9;
+      position: sticky;
+      top: 0;
+    }
+    nav .wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 64px;
+    }
+    nav .logo { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.1rem; }
+    nav .links a { margin-left: 24px; font-size: 0.9rem; color: var(--muted); }
+    nav .links a:hover { color: var(--navy); }
+
+    /* ============ HERO ============ */
+    .hero {
+      background: var(--navy);
+      color: white;
+      padding: 90px 0;
+    }
+    .hero .label {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+    .hero h1 { font-size: 2.8rem; line-height: 1.15; max-width: 18ch; margin-bottom: 18px; }
+    .hero h1 em { color: var(--gold); }
+    .hero p { color: #c7cedb; max-width: 50ch; margin-bottom: 28px; }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 26px;
+      border: 1px solid var(--gold);
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    .btn.gold { background: var(--gold); color: var(--navy); }
+    .btn.gold:hover { background: transparent; color: var(--gold); }
+
+    /* ============ SECTIONS ============ */
+    section { padding: 70px 0; }
+    section .label {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    section h2 { font-size: 1.8rem; color: var(--navy); margin-bottom: 28px; }
+
+    /* ============ CASE STUDY CARDS ============ */
+    .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+    .card {
+      background: white;
+      border: 1px solid #e2e0d9;
+      border-top: 3px solid var(--gold);
+      padding: 26px;
+    }
+    .card .org {
+      color: var(--gold);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .card h3 { color: var(--navy); font-size: 1.2rem; margin: 8px 0 10px; }
+    .card p { color: var(--muted); font-size: 0.92rem; }
+
+    /* ============ CONTACT ============ */
+    .contact {
+      background: var(--navy);
+      color: white;
+      text-align: center;
+      padding: 56px 30px;
+    }
+    .contact h2 { color: white; }
+    .contact p { color: #c7cedb; margin-bottom: 24px; }
+
+    footer { padding: 26px 0; font-size: 0.84rem; color: var(--muted); }
+
+    /* ============ MOBILE ============ */
+    @media (max-width: 700px) {
+      .hero h1 { font-size: 2rem; }
+      nav .links a { margin-left: 14px; font-size: 0.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="wrap">
+      <span class="logo">Aissatou Diallo</span>
+      <span class="links">
+        <a href="#about">About</a>
+        <a href="#work">Case Studies</a>
+        <a href="#contact">Contact</a>
+      </span>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="wrap">
+      <p class="label">Product Manager · New York City</p>
+      <h1>I build products where <em>data meets people.</em></h1>
+      <p>Columbia-trained in computer science and public health. EDIT THIS: write one or two sentences about what you do and care about.</p>
+      <a class="btn gold" href="#work">View my work</a>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="wrap">
+      <p class="label">About</p>
+      <h2>Hi, I'm Aissatou.</h2>
+      <p>EDIT THIS: your bio goes here. Two or three short paragraphs work well. You can add more &lt;p&gt; tags for more paragraphs.</p>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <p class="label">Selected Work</p>
+      <h2>Case studies</h2>
+      <div class="cards">
+
+        <div class="card">
+          <span class="org">Sachi AI Health</span>
+          <h3>EDIT: case study title</h3>
+          <p>EDIT: two-sentence summary of the problem and outcome.</p>
+        </div>
+
+        <div class="card">
+          <span class="org">Amazon</span>
+          <h3>EDIT: case study title</h3>
+          <p>EDIT: two-sentence summary.</p>
+        </div>
+
+        <div class="card">
+          <span class="org">MetLife</span>
+          <h3>EDIT: case study title</h3>
+          <p>EDIT: two-sentence summary.</p>
+        </div>
+
+        <!-- Copy a whole card block above and paste it here to add more -->
+
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact">
+        <h2>Get in touch</h2>
+        <p>EDIT: a line about what you're looking for.</p>
+        <a class="btn gold" href="mailto:your-email@example.com">Email me</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">© 2026 Aissatou Diallo</div>
+  </footer>
+
+</body>
+</html>
