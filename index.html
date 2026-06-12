@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aissatou Diallo — Product Manager</title>
-
+  <title>Aissatou Diallo — Aspiring Product Manager</title>
+  <title>Aissatou Diallo — Aspiring Product Manager</title>
   <!-- Fonts: Fraunces for headlines, Public Sans for body text -->
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
@@ -56,6 +56,13 @@
       color: white;
       padding: 90px 0;
     }
+    /* NEW: two columns — text on the left, photo on the right */
+    .hero .wrap {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
     .hero .label {
       color: var(--gold);
       text-transform: uppercase;
@@ -67,6 +74,15 @@
     .hero h1 { font-size: 2.8rem; line-height: 1.15; max-width: 18ch; margin-bottom: 18px; }
     .hero h1 em { color: var(--gold); }
     .hero p { color: #c7cedb; max-width: 50ch; margin-bottom: 28px; }
+
+    /* NEW: hero photo styling */
+    .hero-photo {
+      width: 100%;
+      max-width: 320px;
+      justify-self: end;
+      border: 2px solid var(--gold);
+      display: block;
+    }
 
     .btn {
       display: inline-block;
@@ -89,6 +105,20 @@
       margin-bottom: 10px;
     }
     section h2 { font-size: 1.8rem; color: var(--navy); margin-bottom: 28px; }
+
+    /* ============ ABOUT (NEW: photo + text side by side) ============ */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 44px;
+      align-items: start;
+    }
+    .about-photo {
+      width: 100%;
+      border: 1px solid #e2e0d9;
+      display: block;
+    }
+    .about-grid p { margin-bottom: 16px; }
 
     /* ============ CASE STUDY CARDS ============ */
     .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
@@ -124,6 +154,11 @@
     @media (max-width: 700px) {
       .hero h1 { font-size: 2rem; }
       nav .links a { margin-left: 14px; font-size: 0.8rem; }
+      /* NEW: stack photos above/below text on small screens */
+      .hero .wrap { grid-template-columns: 1fr; }
+      .hero-photo { justify-self: start; max-width: 260px; }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-photo { max-width: 260px; }
     }
   </style>
 </head>
@@ -142,10 +177,13 @@
 
   <header class="hero">
     <div class="wrap">
-      <p class="label">Product Manager · New York City</p>
-      <h1>I build products where <em>data meets people.</em></h1>
-      <p>Columbia-trained in computer science and public health. EDIT THIS: write one or two sentences about what you do and care about.</p>
-      <a class="btn gold" href="#work">View my work</a>
+      <div>
+        <p class="label"> Aspiring Product Manager · New York City</p>
+        <h1> I aspire to build products where <em> data meets people.</em></h1>
+        <p>Columbia University graduate in Computer Science and Public Health. I turn complex data and user problems into clear, actionable product decisions.</p>
+        <a class="btn gold" href="#work">View my work</a>
+      </div>
+      <img class="hero-photo" src="headshot.jpg" alt="Aissatou Diallo" />
     </div>
   </header>
 
@@ -153,7 +191,12 @@
     <div class="wrap">
       <p class="label">About</p>
       <h2>Hi, I'm Aissatou.</h2>
-      <p>EDIT THIS: your bio goes here. Two or three short paragraphs work well. You can add more &lt;p&gt; tags for more paragraphs.</p>
+      <div class="about-grid">
+        <img class="about-photo" src="grad.jpg" alt="Aissatou Diallo at her Columbia graduation" />
+        <div>
+          <p>EDIT THIS: your bio goes here. Two or three short paragraphs work well. You can add more &lt;p&gt; tags for more paragraphs.</p>
+        </div>
+      </div>
     </div>
   </section>
 
